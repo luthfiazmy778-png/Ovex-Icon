@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ovex Icon — SVG Icon Library</title>
+<link rel="icon" href="../assets/ovex-logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/ovex-icon.css">
+<style>
+:root{--blue:#1677ff;--dark:#183153;--text:#303b4a;--muted:#687385;--border:#e5e9ef}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--text);font-family:Arial,Helvetica,sans-serif}
+.topbar{height:68px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:white}
+.brand{display:flex;align-items:center;gap:10px;color:var(--dark);font-size:22px;font-weight:800;letter-spacing:-1px}
+.brand-mark{width:34px;height:34px;background:var(--blue);border-radius:8px;display:grid;place-items:center;color:white;font-size:21px;font-weight:800;letter-spacing:-2px}
+.brand span{color:var(--blue)}
+.nav{display:flex;align-items:center;gap:25px}
+.nav a{color:#536174;text-decoration:none;font-size:13px;font-weight:600}
+.nav a:hover{color:var(--blue)}
+.content{max-width:1150px;margin:auto;padding:65px 30px}
+.hero{text-align:center;margin-bottom:38px}
+.eyebrow{color:var(--blue);font-size:12px;font-weight:700;letter-spacing:1.5px}
+h1{color:var(--dark);font-size:clamp(35px,5vw,52px);letter-spacing:-2px;margin:15px 0}
+.hero p{color:var(--muted);font-size:15px;line-height:1.7;max-width:600px;margin:auto}
+.search-wrap{height:58px;max-width:750px;margin:32px auto 38px;border:2px solid #dce4ee;border-radius:6px;display:flex;align-items:center;padding:0 15px}
+.search-wrap:focus-within{border-color:var(--blue);box-shadow:0 0 0 3px #1677ff15}
+.search-wrap svg{width:21px;color:#8995a5;flex-shrink:0}
+.search-wrap input{flex:1;min-width:0;border:0;outline:0;padding:12px;font-size:14px}
+.search-wrap button{background:var(--blue);border:0;color:white;padding:11px 18px;border-radius:4px;font-weight:700}
+.section-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.section-heading h2{font-size:20px;color:var(--dark);margin:0}
+.count{font-size:12px;color:var(--muted)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.filter-button{background:#fff;border:1px solid #dce3ec;color:#586577;border-radius:4px;padding:9px 15px;font-size:12px;font-weight:600}
+.filter-button.active,.filter-button:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px}
+.icon-card{min-height:115px;border:1px solid var(--border);border-radius:5px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;cursor:pointer;transition:.15s}
+.icon-card:hover{border-color:var(--blue);background:#f8fbff}
+.preview{height:40px;display:grid;place-items:center;color:var(--dark)}
+.preview img{width:27px;height:27px}
+.icon-info{text-align:center}
+.icon-name{font-size:12px;font-weight:600;color:#364253}
+.icon-category{font-size:10px;color:#9aa3ae;margin-top:4px;text-transform:capitalize}
+.empty{grid-column:1/-1;text-align:center;padding:50px;color:#8995a5;border:1px dashed var(--border)}
+.footer{border-top:1px solid var(--border);margin-top:55px;padding-top:20px;text-align:center;color:#8993a1;font-size:12px}
+.modal{position:fixed;inset:0;background:#18315377;display:none;place-items:center;padding:20px;z-index:30}
+.modal.show{display:grid}
+.modal-box{width:min(100%,380px);background:white;border-radius:8px;padding:27px;text-align:center}
+.modal-preview{width:90px;height:90px;background:#f0f5fc;margin:10px auto 20px;display:grid;place-items:center}
+.modal-preview img{width:42px;height:42px}
+.modal-box h2{color:var(--dark);font-size:21px;margin:0}
+.modal-box p{color:#7b8795;font-size:13px}
+.modal-actions{display:flex;gap:9px;margin-top:20px}
+.modal-actions button{flex:1;border:0;border-radius:4px;padding:12px;font-weight:700}
+.copy-btn{background:var(--blue);color:white}
+.close-btn{background:#edf1f5;color:#526071}
+@media(max-width:850px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:600px){.topbar{height:60px;padding:0 16px}.brand{font-size:19px}.brand-mark{width:31px;height:31px}.nav{gap:14px}.nav a{font-size:12px}.content{padding:45px 16px}.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.icon-card{min-height:100px}}
+@media(max-width:400px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{gap:10px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+ <div class="brand">
+  <div class="brand-mark">O.</div>
+  <div>Ovex <span>Icon</span></div>
+ </div>
+ <nav class="nav">
+  <a href="#icons">Icons</a>
+  <a href="#about">About</a>
+ </nav>
+</header>
+
+<main class="content">
+ <section class="hero">
+  <div class="eyebrow">OVEX ICON LIBRARY</div>
+  <h1>Find the perfect icon.</h1>
+  <p>A growing collection of beautiful SVG icons for developers and designers. Browse, explore and use them in your projects.</p>
+ </section>
+
+ <div class="search-wrap">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.8" cy="10.8" r="7.2"/><path d="m16 16 5 5"/></svg>
+  <input id="iconSearch" type="search" placeholder="Search icons...">
+  <button onclick="document.getElementById('iconSearch').focus()">Search</button>
+ </div>
+
+ <section id="icons">
+  <div class="section-heading">
+   <h2>All Icons</h2>
+   <span class="count" id="iconCount">0 icons</span>
+  </div>
+  <div class="filters" id="styleFilters">
+   <button class="filter-button active" data-style="all">All</button>
+   <button class="filter-button" data-style="solid">Solid</button>
+   <button class="filter-button" data-style="regular">Regular</button>
+   <button class="filter-button" data-style="light">Light</button>
+   <button class="filter-button" data-style="thin">Thin</button>
+   <button class="filter-button" data-style="duotone">Duotone</button>
+   <button class="filter-button" data-style="brands">Brands</button>
+  </div>
+  <div class="grid" id="iconGrid"></div>
+ </section>
+
+ <footer class="footer" id="about">© 2026 Ovex Icon. Built for developers.</footer>
+</main>
+
+<div class="modal" id="modal">
+ <div class="modal-box">
+  <div class="modal-preview"><img id="modalImage" src="" alt=""></div>
+  <h2 id="modalName">Icon</h2>
+  <p id="modalCategory">Category</p>
+  <div class="modal-actions">
+   <button class="close-btn" id="closeModal">Close</button>
+   <button class="copy-btn" id="copyClass">Copy HTML</button>
+  </div>
+ </div>
+</div>
+<script src="../js/ovex-icon.js?v=20261117"></script>
+</body>
+</html>
